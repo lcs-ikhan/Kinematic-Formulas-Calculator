@@ -19,20 +19,48 @@ struct VelocityWithTime: View {
                     .scaledToFit()
                     
                     
+                Group{
+                    Text("Inital Velocity")
+                        .font(.title2)
+                        .bold()
+                    
+                    Slider(value: $initialVelocity,
+                           in: -100...100,
+                           label: { Text("Length") },
+                           minimumValueLabel: {Text("-100") },
+                           maximumValueLabel: {Text("100")})
+                    
+                    Text("\(initialVelocity)")
+                        .font(.title2)
+                }
+                Group{
+                    Text("Acceleration")
+                        .font(.title2)
+                        .bold()
+                    
+                    Slider(value: $acceleration,
+                           in: -100...100,
+                           label: { Text("Acceleration") },
+                           minimumValueLabel: {Text("-100") },
+                           maximumValueLabel: {Text("100")})
+                    
+                    Text("\(acceleration)")
+                }
                 
-            Text("Inital Velocity")
+                Text("Time")
                     .font(.title2)
                     .bold()
                 
-                Slider(value: $initialVelocity,
+                Slider(value: $time,
                        in: -100...100,
-                       label: { Text("Length") },
-                       minimumValueLabel: {Text("0") },
+                       label: { Text("Time") },
+                       minimumValueLabel: {Text("-100") },
                        maximumValueLabel: {Text("100")})
                 
-                Text("\(initialVelocity)")
-                    .font(.title2)
+                Text("\(time)")
+                
             }
+            
                 
               
                 
