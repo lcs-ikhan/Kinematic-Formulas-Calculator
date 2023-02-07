@@ -11,7 +11,7 @@ import SwiftUI
 struct Kinematic_Formulas_CalculatorApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            VelocityWithTime()
         }
     }
 }
