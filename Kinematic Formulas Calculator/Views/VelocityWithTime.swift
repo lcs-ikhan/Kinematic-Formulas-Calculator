@@ -14,11 +14,24 @@ struct VelocityWithTime: View {
     var body: some View {
         NavigationView {
         
-            VStack{
+            VStack(spacing: 15){
                Image("VWithT")
                     .scaledToFit()
                     
-                    Spacer()
+                    
+                
+            Text("Inital Velocity")
+                    .font(.title2)
+                    .bold()
+                
+                Slider(value: $initialVelocity,
+                       in: -100...100,
+                       label: { Text("Length") },
+                       minimumValueLabel: {Text("0") },
+                       maximumValueLabel: {Text("100")})
+                
+                Text("\(initialVelocity)")
+                    .font(.title2)
             }
                 
               
