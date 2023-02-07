@@ -11,6 +11,10 @@ struct VelocityWithTime: View {
     @State var initialVelocity: Double = 3
     @State var acceleration: Double = 2
     @State var time: Double = 1
+    @State var desiredPrecision: Int = 2
+//    var finalVelocity: String {
+//        return
+//    }
     var body: some View {
         NavigationView {
         
@@ -30,7 +34,7 @@ struct VelocityWithTime: View {
                            minimumValueLabel: {Text("-100") },
                            maximumValueLabel: {Text("100")})
                     
-                    Text("\(initialVelocity)")
+                    Text("\(initialVelocity.formatted(.number.precision(.fractionLength(Int(desiredPrecision)))))")
                         .font(.title2)
                 }
                 Group{
@@ -44,7 +48,7 @@ struct VelocityWithTime: View {
                            minimumValueLabel: {Text("-100") },
                            maximumValueLabel: {Text("100")})
                     
-                    Text("\(acceleration)")
+                    Text("\(acceleration.formatted(.number.precision(.fractionLength(Int(desiredPrecision)))))")
                 }
                 
                 Text("Time")
@@ -57,7 +61,7 @@ struct VelocityWithTime: View {
                        minimumValueLabel: {Text("-100") },
                        maximumValueLabel: {Text("100")})
                 
-                Text("\(time)")
+                Text("\(time.formatted(.number.precision(.fractionLength(Int(desiredPrecision)))))")
                 
             }
             

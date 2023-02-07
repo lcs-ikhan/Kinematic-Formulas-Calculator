@@ -21,5 +21,4 @@ struct Result: Identifiable {
 let resultForPreviews = Result(initialVelocity: 0,
                                acceleration: 2,
                                time: 3,
-                               finalVelocity: Text("Final velocity = 6m/s")
-
+                               finalVelocity: "Final velocity = 6m/s")
