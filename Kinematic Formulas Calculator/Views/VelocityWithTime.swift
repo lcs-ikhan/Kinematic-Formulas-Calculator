@@ -8,9 +8,18 @@
 import SwiftUI
 
 struct VelocityWithTime: View {
+    @State var initialVelocity: Double = 3
+    @State var acceleration: Double = 2
+    @State var time: Double = 1
     var body: some View {
         NavigationView {
-            Text("Will hold interface soon")
+        
+            VStack{
+               Image("VWithT")
+                    .scaledToFit()
+                    
+                    Spacer()
+            }
                 
               
                 
