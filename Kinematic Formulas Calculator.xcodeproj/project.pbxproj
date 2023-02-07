@@ -52,7 +52,8 @@
 			isa = PBXGroup;
 			children = (
 				85936B35299297C30023483F /* Kinematic_Formulas_CalculatorApp.swift */,
-				85936B37299297C30023483F /* ContentView.swift */,
+				85936B44299297F90023483F /* Model */,
+				85936B43299297E40023483F /* Views */,
 				85936B39299297C80023483F /* Assets.xcassets */,
 				85936B3B299297C80023483F /* Preview Content */,
 			);
@@ -65,6 +66,21 @@
 				85936B3C299297C80023483F /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		85936B43299297E40023483F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				85936B37299297C30023483F /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		85936B44299297F90023483F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
