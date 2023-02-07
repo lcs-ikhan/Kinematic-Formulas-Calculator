@@ -11,12 +11,15 @@ import Foundation
 
 struct Result: Identifiable {
     let id = UUID()
-    let a: Double
-    let b: Double
-    let c: Double
-    let roots: String
+    let initialVelocity: Double
+    let acceleration: Double
+    let time: Double
+    let finalVelocity: String
     
 }
 
-
+let resultForPreviews = Result(initialVelocity: 0,
+                               acceleration: 2,
+                               time: 3,
+                               finalVelocity: Text("Final velocity = 6m/s")
 
