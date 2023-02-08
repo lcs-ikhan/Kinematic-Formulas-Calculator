@@ -39,9 +39,27 @@ struct VelocityWithTime2: View {
         }
         return unwrappedTime
     }
-    @State var desiredPrecision: Int = 2
     
-    
+    var velocity: String {
+        
+        guard let initialVelocityAsDouble = initialVelocityAsOptionalDouble else {
+            return "Please enter a positive, numeric value."
+        }
+        guard let accelerationAsDouble = accelerationAsOptionalDouble else {
+            
+            return "Please enter a positive, numeric value"
+        }
+        
+        guard let timeAsDouble = timeAsOptionalDouble else {
+            
+            return "Please enter a positive, numeric value"
+           
+        }
+        
+        let velocity = initialVelocityAsDouble + accelerationAsDouble * timeAsDouble
+        
+        return "\(velocity.formatted(.number.precision(.fractionLength(3))))"
+    }
 
     var body: some View {
         NavigationView {
@@ -83,6 +101,12 @@ struct VelocityWithTime2: View {
                 }
                 Group{
                     Text("Velocity")
+                        .font(.title2)
+                        .bold()
+                    
+                    Text("\(velocity)")
+                        .font(.title2)
+                    
                 }
             }
             
