@@ -8,7 +8,18 @@
 import SwiftUI
 
 struct VelocityWithTime2: View {
-    @State var initialVelocity: Double = 3
+
+    @State var initialVelocity: String = ""
+    
+    var initialVelocityAsOptionalDouble: Double? {
+        
+        guard let unwrappedInitialVelocity = Double(initialVelocity) else {
+            
+            return nil
+        }
+        
+        return unwrappedInitialVelocity
+    }
     @State var acceleration: Double = 2
     @State var time: Double = 1
     @State var desiredPrecision: Int = 2
@@ -28,14 +39,12 @@ struct VelocityWithTime2: View {
                         .font(.title2)
                         .bold()
                     
-                    Slider(value: $initialVelocity,
-                           in: -100...100,
-                           label: { Text("Length") },
-                           minimumValueLabel: {Text("-100") },
-                           maximumValueLabel: {Text("100")})
+                  
+                        
+                        TextField("0", text: $initialVelocity)
+                            .font(.title2)
                     
-                    Text("\(initialVelocity.formatted(.number.precision(.fractionLength(Int(desiredPrecision)))))")
-                        .font(.title2)
+                    
                 }
                 Group{
                     Text("Acceleration")
@@ -80,6 +89,6 @@ struct VelocityWithTime2: View {
 
 struct VelocityWithTime2_Previews: PreviewProvider {
     static var previews: some View {
-        VelocityWithTime()
+        VelocityWithTime2()
     }
 }
