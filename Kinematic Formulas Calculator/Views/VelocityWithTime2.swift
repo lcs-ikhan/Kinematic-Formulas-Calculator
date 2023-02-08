@@ -8,7 +8,9 @@
 import SwiftUI
 
 struct VelocityWithTime2: View {
-
+    
+    @State var priorResults: [Result] = []
+    
     @State var initialVelocity: String = ""
     
     var initialVelocityAsOptionalDouble: Double? {
@@ -40,7 +42,7 @@ struct VelocityWithTime2: View {
         return unwrappedTime
     }
     
-    var velocity: String {
+    var finalVelocity: String {
         
         guard let initialVelocityAsDouble = initialVelocityAsOptionalDouble else {
             return "Please enter a positive, numeric value."
@@ -56,9 +58,9 @@ struct VelocityWithTime2: View {
            
         }
         
-        let velocity = initialVelocityAsDouble + accelerationAsDouble * timeAsDouble
+        let finalVelocity = initialVelocityAsDouble + accelerationAsDouble * timeAsDouble
         
-        return "\(velocity.formatted(.number.precision(.fractionLength(3))))"
+        return "\(finalVelocity.formatted(.number.precision(.fractionLength(3))))"
     }
 
     var body: some View {
@@ -76,9 +78,11 @@ struct VelocityWithTime2: View {
                     
                   
                         
+                        
                         TextField("0", text: $initialVelocity)
                             .font(.title2)
-                    
+                        
+                            .padding(.leading, 190.0)
                     
                 }
                 Group{
@@ -88,6 +92,8 @@ struct VelocityWithTime2: View {
                     
                     TextField("0", text: $acceleration)
                         .font(.title2)
+                    
+                        .padding(.leading, 190.0)
                 }
                 Group {
                     Text("Time")
@@ -97,24 +103,24 @@ struct VelocityWithTime2: View {
                     TextField("0", text: $time)
                         .font(.title2)
                     
+                        .padding(.leading, 190.0)
                     
                 }
                 Group{
-                    Text("Velocity")
+                    Text("Final Velocity")
                         .font(.title2)
                         .bold()
                     
-                    Text("\(velocity)")
+                    Text("\(finalVelocity)")
                         .font(.title2)
                     
                 }
             }
+            .navigationTitle("Finding Velocity with Time")
+            .navigationBarTitleDisplayMode(.inline)
             
-                
+        
               
-                
-                .navigationTitle("Finding Velocity with Time")
-                .navigationBarTitleDisplayMode(.inline)
         }
     }
 }
