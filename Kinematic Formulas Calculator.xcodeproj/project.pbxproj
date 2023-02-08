@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		85748C3A2994043500D805D3 /* VelocityWithTime2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85748C392994043500D805D3 /* VelocityWithTime2.swift */; };
 		85936B36299297C30023483F /* Kinematic_Formulas_CalculatorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85936B35299297C30023483F /* Kinematic_Formulas_CalculatorApp.swift */; };
 		85936B3A299297C80023483F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85936B39299297C80023483F /* Assets.xcassets */; };
 		85936B3D299297C80023483F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85936B3C299297C80023483F /* Preview Assets.xcassets */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		85748C392994043500D805D3 /* VelocityWithTime2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VelocityWithTime2.swift; sourceTree = "<group>"; };
 		85936B32299297C30023483F /* Kinematic Formulas Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kinematic Formulas Calculator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		85936B35299297C30023483F /* Kinematic_Formulas_CalculatorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kinematic_Formulas_CalculatorApp.swift; sourceTree = "<group>"; };
 		85936B39299297C80023483F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				85936B45299298BA0023483F /* VelocityWithTime.swift */,
+				85748C392994043500D805D3 /* VelocityWithTime2.swift */,
 				85936B4B2992C2E70023483F /* ResultView.swift */,
 			);
 			path = Views;
@@ -163,6 +166,7 @@
 				85936B4C2992C2E70023483F /* ResultView.swift in Sources */,
 				85936B36299297C30023483F /* Kinematic_Formulas_CalculatorApp.swift in Sources */,
 				85936B46299298BA0023483F /* VelocityWithTime.swift in Sources */,
+				85748C3A2994043500D805D3 /* VelocityWithTime2.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

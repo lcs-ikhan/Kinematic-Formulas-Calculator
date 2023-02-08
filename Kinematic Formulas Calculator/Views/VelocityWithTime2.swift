@@ -7,26 +7,14 @@
 
 import SwiftUI
 
-struct VelocityWithTime: View {
+struct VelocityWithTime2: View {
     @State var initialVelocity: Double = 3
     @State var acceleration: Double = 2
     @State var time: Double = 1
     @State var desiredPrecision: Int = 2
     
     
-//    var finalVelocityAsOptionalDouble: Double? {
-//
-//        guard let unwrappedfinalVelocity = Double(finalVelocity)
-//        else{
-//            return nil
-//        }
-//
-//        return unwrappedfinalVelocity
-//        
-//    }
-//    var finalVelocityFormatted: String {
-//
-//    }
+
     var body: some View {
         NavigationView {
         
@@ -90,7 +78,7 @@ struct VelocityWithTime: View {
     }
 }
 
-struct VelocityWithTime_Previews: PreviewProvider {
+struct VelocityWithTime2_Previews: PreviewProvider {
     static var previews: some View {
         VelocityWithTime()
     }
