@@ -20,8 +20,25 @@ struct VelocityWithTime2: View {
         
         return unwrappedInitialVelocity
     }
-    @State var acceleration: Double = 2
-    @State var time: Double = 1
+    @State var acceleration: String = ""
+    
+    var accelerationAsOptionalDouble: Double? {
+        
+        guard let unwrappedAccerleration = Double(acceleration) else {
+            return  nil
+        }
+        return unwrappedAccerleration
+    }
+    
+    @State var time: String = ""
+    
+    var timeAsOptionalDouble: Double? {
+        
+        guard let unwrappedTime = Double(time) else {
+            return nil
+        }
+        return unwrappedTime
+    }
     @State var desiredPrecision: Int = 2
     
     
@@ -51,26 +68,17 @@ struct VelocityWithTime2: View {
                         .font(.title2)
                         .bold()
                     
-                    Slider(value: $acceleration,
-                           in: -100...100,
-                           label: { Text("Acceleration") },
-                           minimumValueLabel: {Text("-100") },
-                           maximumValueLabel: {Text("100")})
-                    
-                    Text("\(acceleration.formatted(.number.precision(.fractionLength(Int(desiredPrecision)))))")
+                    TextField("0", text: $acceleration)
+                        .font(.title2)
                 }
                 Group {
                     Text("Time")
                         .font(.title2)
                         .bold()
                     
-                    Slider(value: $time,
-                           in: -100...100,
-                           label: { Text("Time") },
-                           minimumValueLabel: {Text("-100") },
-                           maximumValueLabel: {Text("100")})
+                    TextField("0", text: $time)
+                        .font(.title2)
                     
-                    Text("\(time.formatted(.number.precision(.fractionLength(Int(desiredPrecision)))))")
                     
                 }
                 Group{
