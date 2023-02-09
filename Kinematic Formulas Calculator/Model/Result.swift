@@ -11,14 +11,21 @@ import Foundation
 
 struct Result: Identifiable {
     let id = UUID()
-    let initialVelocity: Double
-    let acceleration: Double
-    let time: Double
+    let initialVelocity: String
+    let acceleration: String
+    let time: String
     let finalVelocity: String
     
 }
 
-let resultForPreviews = Result(initialVelocity: 0,
-                               acceleration: 2,
-                               time: 3,
+let resultOneForPreviews = Result(initialVelocity: "0",
+                               acceleration: "2",
+                               time: "3",
                                finalVelocity: "Final velocity = 6m/s")
+
+let resultTwoForPreviews = Result(initialVelocity: "4",
+                                  acceleration: "5",
+                                  time: "2",
+                                  finalVelocity: "Final velocity = 14 m/s")
+
+let historyForPreview = [resultOneForPreviews, resultTwoForPreviews]

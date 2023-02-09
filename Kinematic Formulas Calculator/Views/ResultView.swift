@@ -17,13 +17,13 @@ struct ResultView: View {
         VStack{
             HStack(spacing: 30){
                 Spacer()
-                Text("InitialVelocity:\(somePriorResult.initialVelocity.formatted(.number.precision(.fractionLength(Int(desiredPrecision)))))")
+                Text("InitialVelocity:\(somePriorResult.initialVelocity)")
                     .scaledToFill()
                 
-                Text("Acceleration:\(somePriorResult.acceleration.formatted(.number.precision(.fractionLength(Int(desiredPrecision)))))")
+                Text("Acceleration:\(somePriorResult.acceleration)")
                     .scaledToFill()
                 
-                Text("Time:\(somePriorResult.time.formatted(.number.precision(.fractionLength(Int(desiredPrecision)))))")
+                Text("Time:\(somePriorResult.time)")
                     .scaledToFill()
                 
                 Spacer()
@@ -36,6 +36,6 @@ struct ResultView: View {
 
 struct ResultView_Previews: PreviewProvider {
     static var previews: some View {
-        ResultView(somePriorResult: resultForPreviews)
+        ResultView(somePriorResult: resultOneForPreviews)
     }
 }

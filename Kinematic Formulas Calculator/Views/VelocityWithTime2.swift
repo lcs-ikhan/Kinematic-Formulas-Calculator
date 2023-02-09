@@ -10,9 +10,10 @@ import SwiftUI
 struct VelocityWithTime2: View {
     
     @State var priorResults: [Result] = []
+    @Binding var history: [Result]
     
     @State var initialVelocity: String = ""
-    
+        
     var initialVelocityAsOptionalDouble: Double? {
         
         guard let unwrappedInitialVelocity = Double(initialVelocity) else {
@@ -119,7 +120,19 @@ struct VelocityWithTime2: View {
             .navigationTitle("Finding Velocity with Time")
             .navigationBarTitleDisplayMode(.inline)
             
-        
+            Button(action: {
+
+
+                
+                let priorResult = Result(initialVelocity: initialVelocity, acceleration: acceleration, time: time, finalVelocity: finalVelocity)
+                    
+                history.append(priorResult)
+            }, label: {
+                Text("Save")
+            })
+            
+              
+                
               
         }
     }
@@ -127,6 +140,6 @@ struct VelocityWithTime2: View {
 
 struct VelocityWithTime2_Previews: PreviewProvider {
     static var previews: some View {
-        VelocityWithTime2()
-    }
+        VelocityWithTime2( history: Binding.constant(historyForPreview))
+        }
 }
