@@ -61,13 +61,13 @@ struct VelocityWithTime2: View {
         
         let finalVelocity = initialVelocityAsDouble + accelerationAsDouble * timeAsDouble
         
-        return "\(finalVelocity.formatted(.number.precision(.fractionLength(3))))"
+        return "Final Velocity = \(finalVelocity.formatted(.number.precision(.fractionLength(Int(2))))) m/s"
     }
 
     var body: some View {
         NavigationView {
         
-            VStack(spacing: 15){
+            VStack(spacing: 10){
                 Image("VWithT")
                     .scaledToFit()
                 
@@ -82,8 +82,8 @@ struct VelocityWithTime2: View {
                     
                     TextField("0", text: $initialVelocity)
                         .font(.title2)
-                    
-                        .padding(.leading, 190.0)
+                        .multilineTextAlignment(.center)
+                        
                     
                 }
                 Group{
@@ -93,8 +93,7 @@ struct VelocityWithTime2: View {
                     
                     TextField("0", text: $acceleration)
                         .font(.title2)
-                    
-                        .padding(.leading, 190.0)
+                        .multilineTextAlignment(.center)
                 }
                 Group {
                     Text("Time")
@@ -103,8 +102,7 @@ struct VelocityWithTime2: View {
                     
                     TextField("0", text: $time)
                         .font(.title2)
-                    
-                        .padding(.leading, 190.0)
+                        .multilineTextAlignment(.center)
                     
                 }
                 Group{

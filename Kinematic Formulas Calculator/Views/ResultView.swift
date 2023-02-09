@@ -14,21 +14,14 @@ struct ResultView: View {
     // MARK: Computed properties
     
     var body: some View{
-        VStack{
-            HStack(spacing: 30){
-                Spacer()
-                Text("InitialVelocity:\(somePriorResult.initialVelocity)")
-                    .scaledToFill()
-                
-                Text("Acceleration:\(somePriorResult.acceleration)")
-                    .scaledToFill()
-                
-                Text("Time:\(somePriorResult.time)")
-                    .scaledToFill()
-                
-                Spacer()
-                
-            }
+        VStack {
+            
+            Text("Initial Velocity:\(somePriorResult.initialVelocity)")
+            
+            Text("Acceleration:\(somePriorResult.acceleration)")
+            
+            Text("Time:\(somePriorResult.time)")
+            
             Text(somePriorResult.finalVelocity)
         }
     }
