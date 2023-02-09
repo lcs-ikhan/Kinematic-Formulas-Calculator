@@ -68,22 +68,22 @@ struct VelocityWithTime2: View {
         NavigationView {
         
             VStack(spacing: 15){
-               Image("VWithT")
+                Image("VWithT")
                     .scaledToFit()
-                    
-                    
+                
+                
                 Group{
                     Text("Inital Velocity")
                         .font(.title2)
                         .bold()
                     
-                  
-                        
-                        
-                        TextField("0", text: $initialVelocity)
-                            .font(.title2)
-                        
-                            .padding(.leading, 190.0)
+                    
+                    
+                    
+                    TextField("0", text: $initialVelocity)
+                        .font(.title2)
+                    
+                        .padding(.leading, 190.0)
                     
                 }
                 Group{
@@ -116,22 +116,42 @@ struct VelocityWithTime2: View {
                         .font(.title2)
                     
                 }
-            }
-            .navigationTitle("Finding Velocity with Time")
-            .navigationBarTitleDisplayMode(.inline)
-            
-            Button(action: {
-
-
                 
-                let priorResult = Result(initialVelocity: initialVelocity, acceleration: acceleration, time: time, finalVelocity: finalVelocity)
+                .navigationTitle("Finding Velocity with Time")
+                .navigationBarTitleDisplayMode(.inline)
+                
+                Button(action: {
                     
-                history.append(priorResult)
-            }, label: {
-                Text("Save")
-            })
-            
-              
+                    
+                    
+                    let latestResult = Result(initialVelocity: initialVelocity,
+                                             acceleration: acceleration,
+                                             time: time,
+                                             finalVelocity: finalVelocity)
+                    
+                    priorResults.append(latestResult)
+                }, label: {
+                    Text("Save Result")
+                } )
+                .buttonStyle(.bordered)
+                .padding()
+                
+                HStack{
+                    Text("History")
+                        .font(.title)
+                        .fontWeight(.bold)
+                    Spacer()
+                }
+                List(priorResults.reversed()) { currentResult in
+                    HStack{
+                      
+                        ResultView(somePriorResult: currentResult)
+                        
+                    }
+                }
+                
+                
+            }
                 
               
         }

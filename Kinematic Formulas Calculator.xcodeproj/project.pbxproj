@@ -11,7 +11,6 @@
 		85936B36299297C30023483F /* Kinematic_Formulas_CalculatorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85936B35299297C30023483F /* Kinematic_Formulas_CalculatorApp.swift */; };
 		85936B3A299297C80023483F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85936B39299297C80023483F /* Assets.xcassets */; };
 		85936B3D299297C80023483F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85936B3C299297C80023483F /* Preview Assets.xcassets */; };
-		85936B46299298BA0023483F /* VelocityWithTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85936B45299298BA0023483F /* VelocityWithTime.swift */; };
 		85936B4829929E370023483F /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85936B4729929E370023483F /* Result.swift */; };
 		85936B4C2992C2E70023483F /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85936B4B2992C2E70023483F /* ResultView.swift */; };
 /* End PBXBuildFile section */
@@ -22,7 +21,6 @@
 		85936B35299297C30023483F /* Kinematic_Formulas_CalculatorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kinematic_Formulas_CalculatorApp.swift; sourceTree = "<group>"; };
 		85936B39299297C80023483F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		85936B3C299297C80023483F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		85936B45299298BA0023483F /* VelocityWithTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VelocityWithTime.swift; sourceTree = "<group>"; };
 		85936B4729929E370023483F /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		85936B4B2992C2E70023483F /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -77,7 +75,6 @@
 		85936B43299297E40023483F /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				85936B45299298BA0023483F /* VelocityWithTime.swift */,
 				85748C392994043500D805D3 /* VelocityWithTime2.swift */,
 				85936B4B2992C2E70023483F /* ResultView.swift */,
 			);
@@ -165,7 +162,6 @@
 				85936B4829929E370023483F /* Result.swift in Sources */,
 				85936B4C2992C2E70023483F /* ResultView.swift in Sources */,
 				85936B36299297C30023483F /* Kinematic_Formulas_CalculatorApp.swift in Sources */,
-				85936B46299298BA0023483F /* VelocityWithTime.swift in Sources */,
 				85748C3A2994043500D805D3 /* VelocityWithTime2.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
