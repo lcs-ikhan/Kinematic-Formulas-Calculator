@@ -142,8 +142,9 @@ struct VelocityWithTime2: View {
                 }
                 List(priorResults.reversed()) { currentResult in
                     HStack{
-                      
+                      Spacer()
                         ResultView(somePriorResult: currentResult)
+                        Spacer()
                         
                     }
                 }
