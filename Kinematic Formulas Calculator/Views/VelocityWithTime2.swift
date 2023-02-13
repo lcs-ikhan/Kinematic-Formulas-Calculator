@@ -36,11 +36,13 @@ struct VelocityWithTime2: View {
     @State var time: String = ""
     
     var timeAsOptionalDouble: Double? {
-        
-        guard let unwrappedTime = Double(time) else {
+   
+        guard let unwrappedTime = Double(time)
+        else {
             return nil
         }
-        return unwrappedTime
+//        if{time > 0.0}
+        return abs(unwrappedTime)
     }
     
     var finalVelocity: String {
